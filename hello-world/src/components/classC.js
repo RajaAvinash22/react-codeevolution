@@ -4,7 +4,8 @@ class Welcome extends Component
 {
     render()
     {
-        return <h1> Class Component</h1>
+       const {name,heroName}= this.props 
+        return <h1> {name} {heroName}</h1>
     }
 }
 
