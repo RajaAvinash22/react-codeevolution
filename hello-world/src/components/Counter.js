@@ -8,25 +8,26 @@ import React, { Component } from 'react'
        count: 0, 
      }
    }
-   increement(){
-    //  this.setState ({
-    //    count : this.state.count +1
-    //  }, () =>{
+   increement=()=>{
+     this.setState ({
+       count : this.state.count +1
+     })
+    // , () =>{
     //   console.log('Callback value', this.state.count)
     //  })
 
     // pass function as argument
-    this.setState(prevState =>({
-      count: prevState.count + 1
-    }))
-     console.log(this.state.count)
-   }
-   increementFive(){
-    this.increement()
-    this.increement()
-    this.increement()
-    this.increement()
-    this.increement()
+  //   this.setState(prevState =>({
+  //     count: prevState.count + 1
+  //   }))
+  //    console.log(this.state.count)
+  //  }
+  //  increementFive(){
+  //   this.increement()
+  //   this.increement()
+  //   this.increement()
+  //   this.increement()
+  //   this.increement()
   }
 
   render() {
@@ -34,7 +35,7 @@ import React, { Component } from 'react'
       <div>
         <div>Count - {this.state.count}</div>
         {/* Event handler */}
-        <button onClick ={() =>this.increementFive()}>Increement</button>
+        <button onClick ={this.increement}>Increement</button>
       </div>
     )
   }
