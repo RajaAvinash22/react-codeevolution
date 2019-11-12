@@ -4,9 +4,9 @@ import React, { Component } from 'react'
      
      
   render() {
-      const {count,increement} = this.state
+      const {count,increement} = this.props
     return (
-      <h2 onMouseOver={increement}>Moved {count} </h2>
+      <h2 onMouseOver={increement}>Moved {count} times</h2>
     )
   }
 }

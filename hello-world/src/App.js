@@ -1,14 +1,15 @@
 import React from 'react';
 import './App.css';
-import ClickCounter2 from './components/ClickCounter2';
-import HoverCounter2 from './components/HoverCounter2';
-import User from './components/User';
-import RenderCounter from './components/RenderCounter';
+import CompoC from './components/CompoC';
+import { UserProvider } from './components/userContext';
+// import ClickCounter2 from './components/ClickCounter2';
+// import HoverCounter2 from './components/HoverCounter2';
+// import User from './components/User';
+// import RenderCounter from './components/RenderCounter';
 // import HoverCounter from './components/HoverCounter';
 // import ClickCounter from './components/ClickCounter';
 // import Hero from './components/Hero'
 // import ErrorBound from './components/ErrorBound'
-
 // import FocusInput from './components/FocusInput';
 // import RefsDemo from './components/RefsDemo';
 // import FRParentInput from './components/FRParentInput'
@@ -126,14 +127,23 @@ function App() {
       {/* Render Props */}
       {/* <ClickCounter2 />
       <HoverCounter2 />
+      <User name={()=>'Avinash'} >
       <User render={(isLoggedIn) => isLoggedIn ?'Avinash':'Guest'} /> */}
-      <RenderCounter 
-      render = {(count,increement) => (
-      <ClickCounter2 count={count} increement={increement}/>)}
-      />
-            <RenderCounter 
-      render={(count,increement) => (<HoverCounter2 count={count} increement={increement}/>)}
-      />
+      {/* <RenderCounter>
+        {(count, increement) => (
+          <ClickCounter2 count={count} increement={increement} />
+        )}
+      </RenderCounter>
+      <RenderCounter>
+        {(count, increement) => (
+          <HoverCounter2 count={count} increement={increement} />
+        )}
+      </RenderCounter> */}
+
+      {/* Context implementing on components */}
+      {/* <UserProvider value="Avinash"> */}
+        <CompoC />
+      {/* </UserProvider> */}
 
     </div>
   );
