@@ -4,7 +4,7 @@ class Header extends Component{
     render(){
         return(
             <div className="head">
-                Todo List App
+               <h3> Todo List App</h3>
             </div>
         )
     }
