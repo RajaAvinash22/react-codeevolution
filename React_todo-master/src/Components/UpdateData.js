@@ -39,13 +39,13 @@ class UpdateData extends Component {
           }
           axios.put(`https://todo-app-apis.herokuapp.com/task/${id}`,formData)
               .then(response => {  
-                alert("Data updated Sucessfully !")
+                alert("Your Data Is Updated Successfully...!")
                 this.setState(clear_obj);
                 this.props.history.push("/dataList")
                   // this.setState({ posts: response.data });
               })
               .catch(error => {
-                  alert("Error")
+                  alert("Something Went Wrong!!!")
               });
       }
 
@@ -58,19 +58,19 @@ class UpdateData extends Component {
                     <div className="form-group">
                         <label className="control-label col-sm-1">Name:</label>
                         <div className="col-sm-11">
-                            <input className="form-control" type="text" placeholder="Enter Name..." name="name" value={name} onChange={this.changeHandler} />
+                            <input className="form-control" type="text" placeholder="Enter Your Name..." name="name" value={name} onChange={this.changeHandler} />
                         </div>
                     </div>
                     <div className="form-group">
                         <label className="control-label col-sm-1">Description:</label>
                         <div className="col-sm-11">
-                            <input className="form-control" type="text" placeholder="Enter Description..." name="description" value={description} onChange={this.changeHandler} />
+                            <input className="form-control" type="text" placeholder="Provide Your Description..." name="description" value={description} onChange={this.changeHandler} />
                         </div>
                     </div>
                     <div className="form-group">
                         <label className="control-label col-sm-1">Due Date:</label>
                         <div className="col-sm-11">
-                            <input className="form-control" type="date"   placeholder="Enter Date..." name="dueDate" value={
+                            <input className="form-control" type="date"   placeholder="Select Date..." name="dueDate" value={
                                 dueDate.substring(0,10)
                                 } onChange={this.changeHandler} />
                         </div>
@@ -78,7 +78,7 @@ class UpdateData extends Component {
                     <div className="form-group">
                         <label className="control-label col-sm-1">Priority:</label>
                         <div className="col-sm-11">
-                            <input className="form-control" placeholder="Enter Priority..." type="number" name="priority" value={priority} onChange={this.changeHandler} />
+                            <input className="form-control" placeholder="Provide Your Priority..." type="number" name="priority" value={priority} onChange={this.changeHandler} />
                         </div>
                     </div>
                     <button className="btn" type="submit" onClick = {this.cancelCourse}>Submit</button>

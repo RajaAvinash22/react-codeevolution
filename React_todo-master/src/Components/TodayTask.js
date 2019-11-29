@@ -42,7 +42,7 @@ class TodayTask extends Component{
     }
 
     deleteData(id){
-        if (window.confirm("Delete the item?")) {
+        if (window.confirm("Are You Sure You Want To Delete  Item?")) {
             axios.delete(`https://todo-app-apis.herokuapp.com/task/${id}`)
         .then(response => {
             if(response.data){
@@ -64,7 +64,7 @@ class TodayTask extends Component{
 
       activeEdit = (post) => {
         const formData = {
-            name: "Done",
+            name: "Completed",
             description: post.description,
             dueDate: post.dueDate.split("T")[0],
             priority: post.priority
@@ -80,7 +80,7 @@ class TodayTask extends Component{
                 // this.setState({ posts: response.data });
             })
             .catch(error => {
-                alert("Error")
+                alert("Something Went Wrong!!!")
                 this.setState({posts: []})
             });
         
@@ -124,7 +124,7 @@ class TodayTask extends Component{
                         <td>{post.description}</td>
                         <td>{post.dueDate.split("T")[0]}</td>
                         <td>{post.priority}</td>
-                        <td><button className={ post.name === 'Done' ? 'btn btn-sm btn-light' : 'btn btn-sm btn-info'} onClick={() => this.activeEdit(post)}>{ post.name === 'Done' ? 'Inactive' : 'Active'}</button></td>                        
+                        <td><button className={ post.name === 'Completed' ? 'btn btn-sm btn-light' : 'btn btn-sm btn-info'} onClick={() => this.activeEdit(post)}>{ post.name === 'Completed' ? 'Done' : 'Active'}</button></td>                        
                       <td>  <button className="btn btn-primary btn-sm" onClick={() => this.handleEdit(post._id, post.name, post.description, post.dueDate, post.priority)}>Edit</button></td>
                         <td><button className="btn btn-danger btn-sm" onClick={ () => this.deleteData(post._id) }>Delete</button></td>
                         </tr>

@@ -11,16 +11,16 @@ import TodayTask from './Components/TodayTask';
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Header/>
-        <Sidebar/>
+      <div className = "App">
+        <Header />
+        <Sidebar />
         <Switch className="">
         <Route path="/addData" component = {AddData}/>
         <Route path="/dataList" component = {DataList}/>
         <Route path="/todayTask" component = {TodayTask}/>
         <Route path="/updateData/:id" component = {UpdateData}/>
-        </Switch>
-        <Footer/>
+        </ Switch>
+        <Footer />
       </div>
     </Router>
   );

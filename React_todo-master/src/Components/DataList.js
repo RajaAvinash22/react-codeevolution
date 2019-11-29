@@ -61,13 +61,11 @@ class DataList extends Component{
         console.log( this.props)
         this.props.history.push(`/updateData/${id}`)
       }
-      updateSearch(event){
-        this.setState({search: event.target.value.substr(0,20)});
-      }
+     
 
       activeEdit = (post) => {
          const formData = {
-             name: "Done",
+             name: "Completed",
              description: post.description,
              dueDate: post.dueDate.split("T")[0],
              priority: post.priority
@@ -98,7 +96,7 @@ class DataList extends Component{
 
         return(
             <div className="ml30 scrl"> 
-            <input onChange={this.onchange} type="search" className="form-control" placeholder="Search your name here..."/>
+            <input onChange={this.onchange} type="search" className="form-control" placeholder="Search  Here..."/>
               
                 <table className="scrl">
                     <thead>
@@ -122,7 +120,7 @@ class DataList extends Component{
                         <td>{post.description}</td>
                         <td>{post.dueDate.split("T")[0]}</td>
                         <td>{post.priority}</td>
-                        <td><button className={ post.name === 'Done' ? 'btn btn-sm btn-light' : 'btn btn-sm btn-info'} onClick={() => this.activeEdit(post)}>{ post.name === 'Done' ? 'Inactive' : 'Active'}</button></td>                        
+                        <td><button className={ post.name === 'Completed' ? 'btn btn-sm btn-light' : 'btn btn-sm btn-info'} onClick={() => this.activeEdit(post)}>{ post.name === 'Completed' ? 'Done' : 'Active'}</button></td>                        
                        <td> <button className="btn btn-primary btn-sm" onClick={() => this.handleEdit(post._id, post.name, post.description, post.dueDate, post.priority)}>Edit</button></td>
                         <td><button className="btn btn-danger btn-sm" onClick={ () => this.deleteData(post._id) }>Remove</button></td>
                         </tr>

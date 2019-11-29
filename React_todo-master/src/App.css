@@ -5,12 +5,12 @@
   bottom: 0;
   width: 100%;
   padding-top: 5px;
-  background-color: #232427;
+  background-color: blue;
   color: white;
   text-align: center;
 }
 .head{
-  background-color: black;
+  background-color: blue;
   color: white;
   height: 50px;
   padding-top: 1px;
@@ -24,21 +24,21 @@ nav a {
   margin-top: 10px;
   margin-right: 10px;
   display: inline-flex;
-  background-color: #eee;
+  background-color: blue;
   border-radius: 4px;
 }
 nav a:visited, a:link {
-  color: #334953;
+  color: yellow;
 }
 nav a:hover {
-  color: #039be5;
-  background-color: #cfd8dc;
+  color: red;
+  background-color: yellow;
 }
 nav a.active {
-  color: #039be5;
+  color: red;
 }
 th{
-  background-color: black;
+  background-color: blue;
   color: white;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -69,7 +69,7 @@ td{
 .scrl{
   overflow-y: scroll;
   width: auto;
-height: auto;
+  height: auto;
 }
 
 th a,
