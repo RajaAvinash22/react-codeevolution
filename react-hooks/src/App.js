@@ -1,6 +1,8 @@
 import React, { useReducer } from 'react';
 import './App.css';
 import UserForm from './components/UserForm';
+import ImKey from './components/ImKey';
+
 // import Doc from './components/Doc';
 // import Doc2 from './components/Doc2';
 // import Counter from './components/Counter';
@@ -125,7 +127,9 @@ function App() {
       {/* useCustom counter hook */}
       {/* <Counter />
       <Counter2 /> */}
-      <UserForm />
+      {/* <UserForm /> */}
+<ImKey />
+      
     </div>
   );
 }
